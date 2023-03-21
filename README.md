@@ -38,7 +38,7 @@ To get the position (x,y), we need to change the configuration of the port of ST
 
 1. Have a look of the structure of my example, I only provide the **\Inc** and **\Src** in **\Core**. (you know what it is if you are using **CubeIDE** or **CubeMX**)
 
-2. The board I use is STM32L4r5(**STM32LXX**) with ili9341. If you're using **STM32FXX**, please change the library in **\Inc\my_touch.h**  
+2. I use STM32L4r5(**STM32LXX**) with ili9341. If you're using **STM32FXX**, please change the library in **\Inc\my_touch.h**  
 
    from 
 
