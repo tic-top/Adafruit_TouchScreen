@@ -2,7 +2,7 @@
 
 ##### author: kirp
 
-##### data: 20/3/2023
+##### data: 20/03/2023
 
 ### How does resistive touchscreen work?
 
@@ -16,24 +16,20 @@ A 4-wire resistive touchscreen consists of two layers: a touch layer and a conta
 
 When a user touches the screen, the two layers come into contact and create a conductive path between the X+ and Y+ wires, and another between the X- and Y- wires. This changes the voltage at the contact layer, and the difference between the voltage at the two measurement wires (X+ and X-) or (Y+ and Y-) can be used to calculate the position of the touch event.
 
-
 When we want to check the x position, we will let Y+ to be high level, Y- to be low level, X- to be high impedance. Then we can measure the voltage of X+. Now touch the corner of the screen. We can get the maximum and minimum value of X+.
-$$
-x = \frac{X_{pos}-\min{X_{pos}}}{\max{X_{pos}}-\min{X_{pos}}} * \text{screen width}
-$$
+
+
+![](http://latex.codecogs.com/gif.latex?{x = \frac{X_{pos}-\min{X_{pos}}}{\max{X_{pos}}-\min{X_{pos}}} * \text{screen width}})
 
 ### How can we do this in STM32?
 
-First, we connect X+, X-, Y+, Y- to four port on STM32. 
+To read y, connect X+, X-, Y+, Y- to four port on STM32 and config as below.
 
-For example, to read y:
-$$
-X+ \rightarrow \text{GPIO_OUTPUT, High Level, pull up} \\
-X- \rightarrow \text{GPIO_OUTPUT, Low Level, pull down} \\
-Y+ \rightarrow \text{ADC1_IN} \\
-Y- \rightarrow \text{GPIO_IN} \\
-$$
-Then we can read Y+.
+![](http://latex.codecogs.com/gif.latex?{X+ \rightarrow \text{GPIO\_OUTPUT, High Level, pull up}})
+![](http://latex.codecogs.com/gif.latex?{X- \rightarrow \text{GPIO\_OUTPUT, Low Level, pull down}})
+![](http://latex.codecogs.com/gif.latex?{Y+ \rightarrow \text{ADC1\_IN}})
+![](http://latex.codecogs.com/gif.latex?{Y- \rightarrow \text{GPIO\_IN}})
+Then we can read Y+ from ADC_IN and calculate y.
 
 Similarly, we can fix the configuration to read x.
 
