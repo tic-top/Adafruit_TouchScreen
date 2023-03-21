@@ -13,13 +13,12 @@ A 4-wire resistive touchscreen consists of two layers: a touch layer and a conta
 | **Y+** | screen | **Y-** |
 |        | **X-** |        |
 
-![1](http://latex.codecogs.com/svg.latex?\int_a^bf(x)\ dx)
 When a user touches the screen, the two layers come into contact and create a conductive path between the X+ and Y+ wires, and another between the X- and Y- wires. This changes the voltage at the contact layer, and the difference between the voltage at the two measurement wires (X+ and X-) or (Y+ and Y-) can be used to calculate the position of the touch event.
 
 When we want to check the x position, we will let Y+ to be high level, Y- to be low level, X- to be high impedance. Then we can measure the voltage of X+. Now touch the corner of the screen. We can get the maximum and minimum value of X+.
 
 
-![](http://latex.codecogs.com/gif.latex?{x = \frac{X_{pos}-\min{X_{pos}}}{\max{X_{pos}}-\min{X_{pos}}} * \text{screen width}})
+$${x = \frac{X_{pos}-\min{X_{pos}}}{\max{X_{pos}}-\min{X_{pos}}} * \text{screen width}})$$
 
 ### How can we do this in STM32?
 
