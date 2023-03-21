@@ -18,9 +18,9 @@ When a user touches the screen, the two layers come into contact and create a co
 
 
 When we want to check the x position, we will let Y+ to be high level, Y- to be low level, X- to be high impedance. Then we can measure the voltage of X+. Now touch the corner of the screen. We can get the maximum and minimum value of X+.
-$$
-x = \frac{X_{pos}-\min{X_{pos}}}{\max{X_{pos}}-\min{X_{pos}}} * \text{screen width}
-$$
+
+![](http://latex.codecogs.com/gif.latex?x = \frac{X_{pos}-\min{X_{pos}}}{\max{X_{pos}}-\min{X_{pos}}} * \text{screen width}
+
 
 ### How can we do this in STM32?
 
