@@ -76,7 +76,7 @@ To get the position (x,y), we need to change the configuration of the port of ST
 
 4. I use the DMA to read the ADC data, so you need to specify your buf size(=number of conversion=adc channel size). Now go to  **\Src\my_touch.c**. Line 64, 67, change the 3 to your total number of conversion. Line 69, change 2 to your channel for touch screen adc read.
 
-   [Example, assign **10** ADC1_IN in your cubeIDE. Then, you can choose channel(rank) **4** to read touchscreen output. What you need to do is to delete the code in ***Configure Regular Channel for Rank 4***  in static **void MX_ADC1_Init(void)** in the **\Src\main**. The reason we do so is that we will config channel 4 in touch.c. Now go to  **\Src\my_touch.c**. Line 64, 67, change the 3 to your total number of conversion **10**. Line 69, change 2 to your **4** for touch screen adc read.]
+   [Example, assign **10** ADC1_IN in your cubeIDE. Then, you can choose channel(rank) **4** to read touchscreen output. What you need to do is to delete the code in ***Configure Regular Channel for Rank 4***  in static **void MX_ADC1_Init(void)** in the **\Src\main**. The reason we do so is that we will config channel 4 in my_touch.c. Now go to  **\Src\my_touch.c**. Line 64, 67, change the 3 to your total number of conversion **10**. Line 69, change 2 to your **4** for touch screen adc read.]
 
 5. In **\Src\main,** add #include "my_touch.h" to /* Private includes. Change the line 111 and 112 by yourself.
 
