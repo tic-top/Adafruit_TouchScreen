@@ -24,10 +24,10 @@ $$x = \frac{X_{pos}-\min{X_{pos}}}{\max{X_{pos}}-\min{X_{pos}}} * \text{screen w
 
 To read y, connect X+, X-, Y+, Y- to four port on STM32 and config as below.
 
-$$X+ \rightarrow \text{GPIO\_OUTPUT, High Level, pull up}$$
-$$X- \rightarrow \text{GPIO\_OUTPUT, Low Level, pull down}$$
-$$Y+ \rightarrow \text{ADC1\_IN}$$
-$$Y- \rightarrow \text{GPIO\_IN}$$
+$$X+ \rightarrow \text{GPIO OUTPUT, High Level, pull up}$$
+$$X- \rightarrow \text{GPIO OUTPUT, Low Level, pull down}$$
+$$Y+ \rightarrow \text{ADC1 IN}$$
+$$Y- \rightarrow \text{GPIO IN}$$
 Then we can read Y+ from ADC_IN and calculate y.
 
 Similarly, we can fix the configuration to read x.
